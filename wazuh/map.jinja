@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+# vim: ft=jinja
+
+{% set wazuh = salt['grains.filter_by']({
+    'default': {
+	'client': {
+  		'pkg': 'wazuh-agent',
+  		'config': '/var/ossec/etc/ossec.conf',
+  		'service': {
+    			'name': 'wazuh-agent'
+		}
+	}
+    },
+    'Debian': {
+    },
+    'RedHat': {
+	'client': {
+  		'repo': '/etc/yum.repos.d/wazuh.repo',
+  		'repo_file': 'wazuh-redhat.repo',
+	}
+    },
+    'SuSE': {
+    },
+    'Gentoo': {
+    },
+},
+merge=salt['pillar.get']('wazuh:lookup'), base='default') %}

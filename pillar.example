@@ -1,0 +1,5 @@
+wazuh:
+  client:
+    master: wazuh.example.com
+    protocol: tcp
+    authid-pass: TopSecret
