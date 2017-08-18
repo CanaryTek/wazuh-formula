@@ -1,16 +1,8 @@
 # wazuh-formula
 
-A saltstack formula to install and configure Wazuh (http://wazuh.org
-
-.. note::
-
-    See the full `Salt Formulas installation and usage instructions
-    <http://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html>`_.
+A saltstack formula to install and configure Wazuh (http://wazuh.org)
 
 ## Available states
-
-.. contents::
-    :local:
 
 ### client
 
